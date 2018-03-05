@@ -1,26 +1,23 @@
 require 'stock_quote'
 require 'eu_central_bank'
 
-from = 'USD'
-to = 'KRW'
+companies = ARGV
 
-bank = EuCentralBank.new
-bank.update_rates
+def exchange(volume)
+    bank = EuCentralBank.new
+    bank.update_rates
+    volume * bank.exchange(100, 'USD', 'KRW')
+end
 
-print('NASDAQ 주식회사 심볼을 입력해주세요(띄어쓰기로 복수 입력 가능): ')
-
-company = gets.chomp
-companies = company.split
-companies.each do |company|
-    stock = StockQuote::Stock.quote(company)
-    begin
-        if stock.l.include?","
-            stock.l = stock.l.delete(',')
-        end
-    rescue
-        puts "잘못입력하셨습니다.!!"
-        exit
+def get_stock_info(companies)
+    result = {}
+    companies.each do |company|
+        stock = StockQuote::Stock.quote(company)
+        result[stock.name] = stock.l.delete(',').to_f
     end
-    result = bank.exchange(stock.l, from, to)
-    puts "#{stock.name} =>  #{stock.l} #{from} => #{result} #{to} "
+    return result
+end
+
+get_stock_info(companies).each do |name, price| 
+    puts "#{name} 의 가격은 KRW #{exchange(price)}"
 end
