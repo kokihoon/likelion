@@ -1,0 +1,18 @@
+source 'https://rubygems.org/'
+ruby '2.4.3'
+
+#a powerful alternative to the standard IRB shell for Ruby.
+gem 'pry'
+
+
+# currency_stock
+#HTML parser
+gem 'nokogiri'
+#A simple HTTP and REST client for Ruby
+gem 'rest-client'
+#downloads the exchange rates from the European Central Bank
+gem 'eu_central_bank'
+
+#Real-time, stock data and historical pricing using the Google Finance API.
+gem 'stock_quote'
+
