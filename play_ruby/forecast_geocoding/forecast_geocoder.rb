@@ -1,28 +1,52 @@
 require 'forecast_io'
 require 'geocoder'
 
-location = gets.chomp
-loCord = Geocoder.coordinates location
+#location = gets.chomp
 SECRET_KEY = '8135801886efc2f8048dff1c1cd7c628'
 
 ForecastIO.configure do |configuration|
     configuration.api_key = SECRET_KEY
 end
 
-
-def f_to_c(f)
-    c = (f -32) *5/9
-    return c
+#location 의 위도 경도가 배열로 return
+def geocode(location)
+    Geocoder.coordinates location
 end
 
-#ForecastIO.api_key = 'this-is-your-api-key'
 
-forecast = ForecastIO.forecast(loCord[0], loCord[1])
+class Float
+    def convert_temp(to)
+        if to == 'c' || to == :c
+            ((self -32) * 5 / 9).round 2
+        elsif to == 'f' || to == :f
+            ((self * 9 / 5) + 32 ).round 2
+        else
+            raise ArgumentError, "Argment is not 'f' or 'c'. #{to} is not appropriate."
+        end
+    end
+end
+
+# 섭씨 화씨 변환기
+# def temp_convert(temp, to)
+#     temp = temp.to_f
+#     if to == 'c'
+#         ((temp -32) * 5 / 9).round 2
+#     elsif to == 'f'
+#         ((temp * 9 / 5) + 32 ).round 2
+#     else
+#         raise ArgumentError, "Argment is not 'f' or 'c'. #{to} is not appropriate."
+#     end
+# end
+
+
+print '위치를 입력해주세요: '
+location = gets.chomp
+
+#location = '서울'
+#f 에는 해당 위도경도의 날씨정보 종합 저장
+forecast = ForecastIO.forecast(geocode(location).first, geocode(location).last)
+
+# c에는 f의 정보중 현재의 정보만 저장
 c = forecast.currently
-#binding.pry
 
-#puts "#{forecast.timezone} 의 날씨는 #{c.summary} & #{f_to_c(c.apparentTemperature)}C"
-
-
-puts "#{location} 의 날씨는 현재 상태는 #{c.summary} 입니다. 온도는 #{f_to_c(c.apparentTemperature)} 입니다."
-
+puts "#{location} 의 날씨는 현재 상태는 #{c.summary} 입니다. 온도는 #{c.apparentTemperature.convert_temp('c')} °C 입니다."
