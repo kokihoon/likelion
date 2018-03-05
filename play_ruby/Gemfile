@@ -17,4 +17,8 @@ gem 'eu_central_bank'
 gem 'stock_quote'
 
 #forecast_geocoder
+#Darkapp forecast.io API wrapper in Ruby.
 gem 'forecast_io'
+
+#Geocoder is a complete geocoding solution for Ruby.
+gem 'geocoder'

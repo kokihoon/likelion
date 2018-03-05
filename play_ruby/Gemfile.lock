@@ -15,6 +15,7 @@ GEM
       faraday
       hashie
       multi_json
+    geocoder (1.4.6)
     hashie (3.5.7)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -54,6 +55,7 @@ PLATFORMS
 DEPENDENCIES
   eu_central_bank
   forecast_io
+  geocoder
   nokogiri
   pry
   rest-client
