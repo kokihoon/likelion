@@ -16,3 +16,5 @@ gem 'eu_central_bank'
 #Real-time, stock data and historical pricing using the Google Finance API.
 gem 'stock_quote'
 
+#forecast_geocoder
+gem 'forecast_io'
