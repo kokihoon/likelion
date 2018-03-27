@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="./Magnific-Popup-master/dist/magnific-popup.css"> 
     <script src="./Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,6 +21,8 @@
                 <li><a href="#skill">전문 기술</a></li>
                 <li><a href="#experi">경력</a></li>
                 <li><a href="#education">교육</a></li>
+                <li><a href="#timesch">시간표</a></li>
+                <li><a href="#contact">연락</a></li>
             </ul>
         </nav>
     </header>
@@ -59,7 +61,7 @@
         <div class="container">
             <div>JAVA</div>
             <div>PYTHON</div>
-            <div>C++</div>
+            <div>RUBY</div>
             <div>JAVASCRIPT</div>
         </div>
         <h2>자주 사용하는 소프트웨어</h2>
@@ -69,6 +71,7 @@
                     프레임워크하고 엔진
                 </h4>
                 <ul>
+                    <li>Rails</li>
                     <li>React</li>
                     <li>Electron</li>
                     <li>Node.js</li>
@@ -114,7 +117,7 @@
         <div class="flex-col-2">
             <article>
                 <a href="#" id="open-popup">
-                    <img src="./image/test.png">
+                    <img src="./image/test.png" alt="데이터베이스연구실">
                 </a>
             </article>
             <article>
@@ -123,7 +126,33 @@
                         </a>
             </article>
         </div>
-
+        <div class="seperator"></div>
+        <h2>멋쟁이사자처럼/운영진</h2>
+        <p>
+            3학년 때부터 멋쟁이사자처럼에 관심이 있어 지원을 하게 되었고 4학년 때 운영진을 맡게 되었습니다. 그리고 현재 엄청난 운영진들과 같이 멋쟁이사자처럼을 운영하게 되었습니다. 
+        </p>
+        <div class="flex-col-2">
+            <article>
+                <strong>동아리 : </strong>
+                멋쟁이사자처럼
+            </article>
+            <article>
+                <strong>기간 : </strong>
+                2018년 ~ 현재
+            </article>
+        </div>
+        <div class="flex-col-2">
+            <article>
+                <a href="#" id= "open-popup">
+                    <img src="./image/test.png" alt="멋쟁이사자처럼">
+                </a>
+            </article>
+            <article>
+                <a href="#" id="open-popup">
+                    <img src="./image/test.png" alt="">
+                </a>
+            </article>
+        </div>
     </section>
     <section id="education">
         <h1>교 육</h1>
@@ -133,56 +162,122 @@
         <p>2012년에 경성대학교 컴퓨터 공학과에 입학을 하였습니다. 그리고 1학년을 마치고 군대를 갔다가 왔습니다. 15년에 복학을 하여서 2학년을 마치고 1년 휴학을 하고 호주에 워홀을 갔다 왔습니다.</p>
         <p><strong>2019년 초 예정</strong></p>
         <div class="seperator"></div>
+        <h2>Mercury Colleges</h2>
+        <p class="cente">전공 : English <span>•</span>호주 원어민</p>
+        <p>2016년에 호주로 워홀을 떠나게 되었습니다. 거기에서 많은 경험들을 하고 5주정도 머큐리 학원이라는 곳을 알아봐서 다녀보았습니다. 처음에는 재미있엇지만 나중에 갈수록 지루해져서 안나가게 되었습니다.</p>
+        <p><strong>2016년 8월</strong></p>
     </section>
-    <!-- <script>
+    <section id="timesch">
+        <h1>시 간 표</h1>
+        <div class="line"></div>
+        <div class="tabl">
+            <table border="1">
+                <caption style="font-size:2em;"><strong>4학년 1학기</strong></caption>
+                <tr>
+                    <th></th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                </tr>
+                <tr>
+                    <td>8:00-8:50</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9:00-9:50</td>
+                    <td></td>
+                    <td>웹프로그래밍</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10:00-10:50</td>
+                    <td></td>
+                    <td>웹프로그래밍</td>
+                    <td>머신러닝기초</td>
+                    <td></td>
+                    <td>컴퓨터활용</td>
+                </tr>
+                <tr>
+                    <td>11:00-11:50</td>
+                    <td></td>
+                    <td>웹프로그래밍</td>
+                    <td></td>
+                    <td></td>
+                    <td>컴퓨터활용</td>
+                </tr>
+                <tr>
+                    <td>12:00-12:50</td>
+                    <td></td>
+                    <td></td>
+                    <td>어셈블리프로그래밍</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13:00-13:50</td>
+                    <td>머신러닝기초</td>
+                    <td>3D프린팅</td>
+                    <td>어셈블리프로그래밍</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14:00-14:50</td>
+                    <td>머신러닝기초</td>
+                    <td>3D프린팅</td>
+                    <td></td>
+                    <td>성문화와심리</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15:00-15:50</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>성문화와심리</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>16:00-16:50</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>17:00-17:50</td>
+                    <td>어셈블리프로그래밍</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section id="contact">
+        <h1>연 락</h1>
+        <div class="line"></div>
+        <p>여러분, 혹시나 궁금한 점이 있으시다면 언제든지 연락 주세요~!!!!</p>
+        <div class="flex-col-2">
+            <article>
+                <p><strong>연락처 : </strong><br> 010-9074-2565</p>
+            </article>
+            <article>
+                <p><strong>이메일 : </strong><br> rhrlgns777@gmail.com</p>
+            </article>
 
-        // 메뉴바 상단 고정
-        window.onscroll = function() {
-            myFunction()
-        };
-        var navbar = document.getElementById("nav");
-        var sticky = navbar.offsetTop;
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky");
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-
-                // 스크롤 부드럽게 내리기
-        $(document).ready(function(){
-            $('a[href^="#"]').on('click',function (e) {
-                e.preventDefault();
-                var target = this.hash;
-                var $target = $(target);
-                $('html, body').stop().animate({
-                    'scrollTop': $target.offset().top
-                }, 900, 'swing', function () {
-                    window.location.hash = target;
-                });
-            });
-        });
-
-        //클릭하면 화면 나오기
-
-        $('#open-popup').magnificPopup({
-            items: [
-            {
-                src: './image/time1.jpg',
-                title: 'Peter & Paul fortress in SPB'
-            },
-            {
-                src: './image/time2.jpg',
-                type: 'iframe' // this overrides default type
-            }
-            ],
-            gallery: {
-            enabled: true
-            },
-            type: 'image' // this is a default type
-        });
-    </script> -->
+        </div>
+    </section>
     <script src="./js/test.js" type="text/javascript"></script>
  
 </body>
