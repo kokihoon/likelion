@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
+  get '/utilities' => 'utilites#index'
+
+  get 'utilities/pick_lucky_numbers'
+
+  get 'utilities/get_stock_info'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'home#index.html.erb'
-  #get '/' => 'home#index.html.erb'
+  root 'home#index'
+  #get '/' => 'home#index'
 
   get '/animals/cat' => 'animals#cat'
   get '/animals/dog' => 'animals#dog'
-  get '/animals' => 'animals#index.html.erb'
+  get '/animals'  => 'animals#index.html.erb'
 
-  get '/music/index' => 'music#index'
-  get '/music/1' => 'music#movie_1'
-  get '/music/2' => 'music#movie_2'
-  get '/music/3' => 'music#movie_3'
+  get '/musics/index' => 'musics#index'
+  get '/musics/1' => 'musics#music_1'
+  get '/musics/2' => 'musics#music_2'
+  get '/musics/3' => 'musics#music_3'
 
 end
