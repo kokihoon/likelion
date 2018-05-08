@@ -12,4 +12,8 @@ class UtilitiesController < ApplicationController
 
   def get_stock_info
   end
+
+  def show_stock_info
+    @stocks = StockQuote::Stock.quote([params[:company_code1],params[:company_code2],params[:company_code3]])
+  end
 end

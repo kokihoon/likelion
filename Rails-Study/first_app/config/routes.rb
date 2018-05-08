@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  get '/utilities' => 'utilites#index'
 
-  get 'utilities/pick_lucky_numbers'
 
-  get 'utilities/get_stock_info'
+  get '/utilities' => 'utilities#index'
+
+  get '/utilities/pick_lucky_numbers'
+
+  get '/utilities/get_stock_info'
+  get '/utilities/show_stock_info'  => 'utilities#show_stock_info'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'
