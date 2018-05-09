@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'rails_db'
+
 # 주식 시세 받아오기.
 gem 'stock_quote'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
