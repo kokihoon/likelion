@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  #note
+  get '/notes/new' => 'notes#new'
+  get 'notes/create' => 'notes#create'
+  get '/notes' => 'notes#index'
+  get '/notes/:id' => 'notes#show'
+
   get '/utilities' => 'utilities#index'
 
   get '/utilities/pick_lucky_numbers'
