@@ -1,8 +1,22 @@
 <h1>Articles#new</h1>
 <p>Find me in app/views/articles/new.html.erb</p>
-<form action="/articles" method="POST">
-  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token">
-  <input type="text" name="article[title]">
-  <input type="text" name="article[content]">
-  <input type="submit">
-</form>
+
+<p><%= link_to 'index', '#' %></p>
+
+<%= form_for(@article) do |f| %>
+  <%= f.label :title%>
+  <%= f.text_field :title%>
+
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+
+  <%= f.submit value: '얍'%>
+<% end %>
+
+<a href="#">index</a>
+<!--<form action="/articles" method="POST">-->
+<!--  <input type="hidden" value="<%#= form_authenticity_token %>" name="authenticity_token">-->
+<!--  <input type="text" name="article[title]">-->
+<!--  <input type="text" name="article[content]">-->
+<!--  <input type="submit">-->
+<!--</form>-->

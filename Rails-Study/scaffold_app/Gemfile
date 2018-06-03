@@ -6,6 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'rails_db'
+# 회원 관리
+gem 'devise'
 #진화한 rails console
 gem 'pry-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
