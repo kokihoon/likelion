@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'font-awesome-rails'
+gem 'bootstrap4-kaminari-views'
+gem 'kaminari'
+gem 'tinymce-rails'
 gem 'bootstrap_form', '>= 4.0.0.alpha1'
 gem 'devise-bootstrap-views'
 gem 'jquery-rails'
