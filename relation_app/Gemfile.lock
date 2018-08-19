@@ -47,6 +47,8 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
+    bootstrap_form (4.0.0.alpha1)
+      rails (>= 5.0)
     builder (3.2.3)
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
@@ -224,6 +226,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap
+  bootstrap_form (>= 4.0.0.alpha1)
   byebug
   coffee-rails (~> 4.2)
   devise
